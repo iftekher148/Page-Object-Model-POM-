@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SeleniumTestSuite" parallel="methods" thread-count="2">  <!-- parallel="methods"- method level Check -->
+<test name="SeleniumTestCase" parallel="methods" thread-count="2">
+    <classes>
+        <class name="testcases.DemoLoginPageTest"/>
+        <class name="testcases.TestProductPage"/>
+        <!-- Add more test classes as needed -->
+    </classes>
+</test>
+</suite>

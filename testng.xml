@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="F:/Java Automation/PageObjectModel">
+        <classes>
+            <class name="testcases.DemoLoginPageTest">
+                <methods>
+                    <include name="testLoginWithValidCredentials"/>
+                    <include name="testLoginWithOutPassword"/>
+                    <include name="testLoginWithOutUserName"/>
+                    <include name="testLoginWithOutCredentials"/>
+                    <include name="testLoginWithInvalidCredentials"/>
+                </methods>
+            </class>
+            <class name="testcases.TestHomePage">
+                <methods>
+                    <include name="testHomePageTitle"/>
+                    <include name="testHomePageUrl"/>
+                    <include name="testHomePageRegistrationButton"/>
+                    <include name="testHomePageLoginButton"/>
+                </methods>
+            </class>
+            <class name="testcases.TestLogin">
+                <methods>
+                    <include name="testUserLogin"/>
+                </methods>
+            </class>
+            <class name="testcases.TestProductPage">
+                <methods>
+                    <include name="testAddToCartButton"/>
+                    <include name="testRemoveToCartButton"/>
+                </methods>
+            </class>
+            <class name="testcases.TestRegistration">
+                <methods>
+                    <include name="testUserRegistration"/>
+                </methods>
+            </class>
+            <class name="testcases.TestSearchItem">
+                <methods>
+                    <include name="testSearchPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

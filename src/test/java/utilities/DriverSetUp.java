@@ -4,7 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import java.time.Duration;
@@ -57,7 +59,7 @@ public class DriverSetUp {
     //When a method is synchronized, only one thread can execute it at a time.
     // This is often used to prevent concurrent access and potential data corruption in multi-threaded environments.
     //synchronized- je jeta call korbe seta pabe and seta quite korbe
-    @BeforeSuite
+    @BeforeMethod
    public static synchronized void setBrowser(){
         WebDriver driver = createDriver(browserName);
         driver.manage().window().maximize();
@@ -65,7 +67,7 @@ public class DriverSetUp {
         setDriver(driver);
     }
 
-    @AfterSuite
+    @AfterMethod
     public static synchronized void quiteBrowser(){
         getDriver().quit();
     }
